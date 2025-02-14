@@ -3,18 +3,18 @@ import { Effect } from 'effect';
 async function getData() {
 	if (wixWindowFrontend.rendering.env == "backend") {
 		console.log("Rendering on the server");
-	  wixWindowFrontend.warmupData.set("data", `Data from SSR`);
+	  wixWindowFrontend.warmupData.set("data", `Data from SSR TEST`);
 	}
   }
   
   $w.onReady(async function () {
-	getData() 
+	await getData() 
     const p = Effect.gen(function* () {
-    	 yield* Effect.logInfo('Data not found in warmupData, fetching from dataFunction Random text!');
-		 yield* Effect.logInfo('testest')
+		 yield* Effect.logInfo('TEST from Effect code')
     });
     await Effect.runPromise(p);
+	console.log('TEST2')
 	const dataResults = wixWindowFrontend.warmupData.get("data");
-	console.log('RESULLT: ', dataResults);
+	console.log('RESULT: ', dataResults);
   });
   

@@ -8,7 +8,7 @@ async function getData() {
   }
   
   $w.onReady(async function () {
-	getData() 
+	await getData() 
 	const dataResults = wixWindowFrontend.warmupData.get("data");
 	console.log('RESULLT: ', dataResults);
   });
