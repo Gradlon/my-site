@@ -14,4 +14,4 @@ async function getData() {
 	const dataResults = wixWindowFrontend.warmupData.get("data");
 	console.log('RESULLT: ', dataResults);
   });
-  
+   
