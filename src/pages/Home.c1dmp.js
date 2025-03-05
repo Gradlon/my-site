@@ -10,7 +10,7 @@ async function getData() {
 $w.onReady(async function () {
 	await getData() 
     const p = Effect.gen(function* () {
-		yield* Effect.logInfo('TEST from Effect code')
+		yield* Effect.logInfo('TEST from Effect code 2')
     });
     await Effect.runPromise(p);
 	console.log('TEST2')
