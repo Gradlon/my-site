@@ -1,18 +1,12 @@
 import wixWindowFrontend from 'wix-window-frontend';
-import { Effect } from 'effect';
-async function getData2() {
-	if (wixWindowFrontend.rendering.env == 'backend') {
-		console.log('Rendering on the server');
-		wixWindowFrontend.warmupData.set('data', `This comes from the server`);
-	}
-}
-
+// import { Effect } from 'effect';
 export function setup_ssr_repeater(repeater_data) {
 	$w('#repeater-ssr').data = repeater_data;
 	$w('#repeater-ssr').onItemReady(($item, itemData, index) => {
 		$item('#repeater-ssr-title').text = itemData.title;
 	});
 }
+
 export function setup_csr_repeater(repeater_data) {
 	$w('#repeater-csr').data = repeater_data;
 	$w('#repeater-csr').onItemReady(($item, itemData, index) => {
@@ -23,10 +17,11 @@ export function setup_csr_repeater(repeater_data) {
 export async function ssr_only() {
 	if (wixWindowFrontend.rendering.env == 'backend') {
 		const data = await getData();
-		// wixWindowFrontend.warmupData.set('repeaterData', data);
+		await wixWindowFrontend.warmupData.set('repeaterData', data);
 		wixWindowFrontend.warmupData.set('data', `This comes from the server`);
 
-		// setup_csr_repeater(data);
+		console.log('DATA', data);
+		setup_csr_repeater(data);
 	}
 }
 
@@ -35,16 +30,16 @@ export async function csr_only() {
 		const dataResults = wixWindowFrontend.warmupData.get('data');
 		console.log('SSR Data: ', dataResults);
 
-		const warmedUpData = wixWindowFrontend.warmupData.get('repeater_data');
+		const warmedUpData = wixWindowFrontend.warmupData.get('repeaterData');
 		if(warmedUpData) {
 			console.log('Rendering repeater with SSR data');
 			setup_ssr_repeater(warmedUpData);
 		}
-		// if(!warmedUpData) {
-		// 	console.log('Rendering repeater with CSR data');
-		// 	const data = await getData();
-		// 	setup_csr_repeater(data);
-		// }
+		if(!warmedUpData) {
+			console.log('Rendering repeater with CSR data');
+			const data = await getData();
+			setup_csr_repeater(data);
+		}
 
 	}
 }
