@@ -16,12 +16,17 @@ export function setup_csr_repeater(repeater_data) {
 
 export async function ssr_only() {
 	if (wixWindowFrontend.rendering.env == 'backend') {
+
+		// - This code breaks SSR
 		const data = await getData();
-		await wixWindowFrontend.warmupData.set('repeaterData', data);
-		wixWindowFrontend.warmupData.set('data', `This comes from the server`);
+		wixWindowFrontend.warmupData.set('repeaterData', data);
 
 		console.log('DATA', data);
 		setup_csr_repeater(data);
+		// - END
+
+		wixWindowFrontend.warmupData.set('data', `This comes from the server`);
+
 	}
 }
 
@@ -45,7 +50,6 @@ export async function csr_only() {
 }
 
 export async function csr_ssr() {
-
 }
 
 $w.onReady(async function () {
