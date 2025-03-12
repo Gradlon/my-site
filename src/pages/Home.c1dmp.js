@@ -1,4 +1,6 @@
 import wixWindowFrontend from 'wix-window-frontend';
+import wixData from "wix-data";
+
 // import { Effect } from 'effect';
 export function setup_ssr_repeater(repeater_data) {
 	$w('#repeater-ssr').data = repeater_data;
@@ -18,20 +20,24 @@ export async function ssr_only() {
 	if (wixWindowFrontend.rendering.env == 'backend') {
 
 		// - This code breaks SSR
-		const data = await getData();
+		let data = await wixData.query("Fakedb").find();
 		wixWindowFrontend.warmupData.set('repeaterData', data);
 
 		console.log('DATA', data);
 		setup_csr_repeater(data);
 		// - END
 
-		wixWindowFrontend.warmupData.set('data', `This comes from the server`);
+		wixWindowFrontend.warmupData.set('data', `This comes from the server ${wixWindowFrontend.rendering.env}`);
 
 	}
 }
 
 export async function csr_only() {
 	if (wixWindowFrontend.rendering.env == 'browser') {
+
+		let data = await wixData.query("Fakedb").find();
+		
+		console.log('Data from Collection(SSR): ', data);
 		const dataResults = wixWindowFrontend.warmupData.get('data');
 		console.log('SSR Data: ', dataResults);
 
@@ -42,7 +48,7 @@ export async function csr_only() {
 		}
 		if(!warmedUpData) {
 			console.log('Rendering repeater with CSR data');
-			const data = await getData();
+			const data = await wixData.query("Fakedb").find();
 			setup_csr_repeater(data);
 		}
 
@@ -57,29 +63,3 @@ $w.onReady(async function () {
 	await csr_only();
 	await csr_ssr();
 });
-
-export async function getData() {
-	return new Promise((resolve, reject) => {
-		const data = [
-			{
-				_id: '1',
-				title: 'Item 1',
-				description: 'Description 1',
-			},
-			{
-				_id: '2',
-				title: 'Item 2',
-				description: 'Description 1',
-			},
-			{
-				_id: '3',
-				title: 'Item 3',
-				description: 'Description 1',
-			},
-		];
-		setTimeout(() => {
-			resolve(data);
-		}, 1000);
-	});
-}
-
