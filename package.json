@@ -6,6 +6,8 @@
     "react": "16.14.0"
   },
   "dependencies": {
+    "@wix/essentials": "^0.1.24",
+    "@wix/multilingual": "^1.0.171",
     "effect": "3.12.11"
   },
   "scripts": {

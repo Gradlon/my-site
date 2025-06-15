@@ -3,16 +3,16 @@ import wixData from "wix-data";
 
 async function setWarmupViaFrontend () {
     console.log("setting warmup data");
-        let data = await wixData.query("Fakedb").find();
+        let data = await wixData.query("organizations").find();
 
         wixWindowFrontend.warmupData.set("foo", `bar`);
-        wixWindowFrontend.warmupData.set("data", data);
+        wixWindowFrontend.warmupData.set("data", data.items);
         console.log('DATA', data);
 }
 
 $w.onReady(async function () { 
     await setWarmupViaFrontend();
-    const data = wixWindowFrontend.warmupData.get("data"); 
+    const data = await wixWindowFrontend.warmupData.get("data"); 
     console.log('WarmUp Data', data);
 
 }); 

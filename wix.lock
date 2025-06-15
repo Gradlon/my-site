@@ -22,6 +22,78 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
     ],\
     "fallbackPool": [\
       [\
+        "@babel/runtime",\
+        "npm:7.27.6"\
+      ],\
+      [\
+        "@wix/auto_sdk_multilingual_entity-mapper",\
+        "npm:1.0.13"\
+      ],\
+      [\
+        "@wix/auto_sdk_multilingual_locale-settings",\
+        "npm:1.0.14"\
+      ],\
+      [\
+        "@wix/auto_sdk_multilingual_locales",\
+        "npm:1.0.24"\
+      ],\
+      [\
+        "@wix/auto_sdk_multilingual_machine-translation",\
+        "npm:1.0.20"\
+      ],\
+      [\
+        "@wix/auto_sdk_multilingual_site-translator",\
+        "npm:1.0.11"\
+      ],\
+      [\
+        "@wix/auto_sdk_multilingual_translation-contents",\
+        "npm:1.0.36"\
+      ],\
+      [\
+        "@wix/auto_sdk_multilingual_translation-credits",\
+        "npm:1.0.23"\
+      ],\
+      [\
+        "@wix/auto_sdk_multilingual_translation-published-contents",\
+        "npm:1.0.28"\
+      ],\
+      [\
+        "@wix/auto_sdk_multilingual_translation-schemas",\
+        "npm:1.0.27"\
+      ],\
+      [\
+        "@wix/error-handler-types",\
+        "npm:1.9.0"\
+      ],\
+      [\
+        "@wix/essentials",\
+        "npm:0.1.24"\
+      ],\
+      [\
+        "@wix/monitoring",\
+        "npm:0.21.0"\
+      ],\
+      [\
+        "@wix/monitoring-types",\
+        "npm:0.12.0"\
+      ],\
+      [\
+        "@wix/multilingual",\
+        "npm:1.0.171"\
+      ],\
+      [\
+        "@wix/sdk-context",\
+        "npm:0.0.1"\
+      ],\
+      [\
+        "@wix/sdk-runtime",\
+        "npm:0.3.55"\
+      ],\
+      [\
+        "@wix/sdk-types",\
+        "npm:1.13.31"\
+      ],\
+      [\
         "effect",\
         "npm:3.12.11"\
       ],\
@@ -30,8 +102,16 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         "npm:3.23.2"\
       ],\
       [\
+        "graphql",\
+        "npm:16.11.0"\
+      ],\
+      [\
         "pure-rand",\
         "npm:6.1.0"\
+      ],\
+      [\
+        "type-fest",\
+        "npm:4.41.0"\
       ]\
     ],\
     "packageRegistryData": [\
@@ -39,9 +119,211 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         [null, {\
           "packageLocation": "./",\
           "packageDependencies": [\
+            ["@wix/essentials", "npm:0.1.24"],\
+            ["@wix/multilingual", "npm:1.0.171"],\
             ["effect", "npm:3.12.11"]\
           ],\
           "linkType": "SOFT"\
+        }]\
+      ]],\
+      ["@babel/runtime", [\
+        ["npm:7.27.6", {\
+          "packageLocation": "../dynamic-modules/yarn-cache/cache/@babel-runtime-npm-7.27.6-350e7a5827-8c0.zip/node_modules/@babel/runtime/",\
+          "packageDependencies": [\
+            ["@babel/runtime", "npm:7.27.6"]\
+          ],\
+          "linkType": "HARD"\
+        }]\
+      ]],\
+      ["@wix/auto_sdk_multilingual_entity-mapper", [\
+        ["npm:1.0.13", {\
+          "packageLocation": "../dynamic-modules/yarn-cache/cache/@wix-auto_sdk_multilingual_entity-mapper-npm-1.0.13-ba653abbf1-8c0.zip/node_modules/@wix/auto_sdk_multilingual_entity-mapper/",\
+          "packageDependencies": [\
+            ["@wix/auto_sdk_multilingual_entity-mapper", "npm:1.0.13"],\
+            ["@wix/sdk-runtime", "npm:0.3.55"],\
+            ["@wix/sdk-types", "npm:1.13.31"]\
+          ],\
+          "linkType": "HARD"\
+        }]\
+      ]],\
+      ["@wix/auto_sdk_multilingual_locale-settings", [\
+        ["npm:1.0.14", {\
+          "packageLocation": "../dynamic-modules/yarn-cache/cache/@wix-auto_sdk_multilingual_locale-settings-npm-1.0.14-098e6e0afe-8c0.zip/node_modules/@wix/auto_sdk_multilingual_locale-settings/",\
+          "packageDependencies": [\
+            ["@wix/auto_sdk_multilingual_locale-settings", "npm:1.0.14"],\
+            ["@wix/sdk-runtime", "npm:0.3.55"],\
+            ["@wix/sdk-types", "npm:1.13.31"]\
+          ],\
+          "linkType": "HARD"\
+        }]\
+      ]],\
+      ["@wix/auto_sdk_multilingual_locales", [\
+        ["npm:1.0.24", {\
+          "packageLocation": "../dynamic-modules/yarn-cache/cache/@wix-auto_sdk_multilingual_locales-npm-1.0.24-7f79a672af-8c0.zip/node_modules/@wix/auto_sdk_multilingual_locales/",\
+          "packageDependencies": [\
+            ["@wix/auto_sdk_multilingual_locales", "npm:1.0.24"],\
+            ["@wix/sdk-runtime", "npm:0.3.55"],\
+            ["@wix/sdk-types", "npm:1.13.31"]\
+          ],\
+          "linkType": "HARD"\
+        }]\
+      ]],\
+      ["@wix/auto_sdk_multilingual_machine-translation", [\
+        ["npm:1.0.20", {\
+          "packageLocation": "../dynamic-modules/yarn-cache/cache/@wix-auto_sdk_multilingual_machine-translation-npm-1.0.20-f23a757946-8c0.zip/node_modules/@wix/auto_sdk_multilingual_machine-translation/",\
+          "packageDependencies": [\
+            ["@wix/auto_sdk_multilingual_machine-translation", "npm:1.0.20"],\
+            ["@wix/sdk-runtime", "npm:0.3.55"],\
+            ["@wix/sdk-types", "npm:1.13.31"]\
+          ],\
+          "linkType": "HARD"\
+        }]\
+      ]],\
+      ["@wix/auto_sdk_multilingual_site-translator", [\
+        ["npm:1.0.11", {\
+          "packageLocation": "../dynamic-modules/yarn-cache/cache/@wix-auto_sdk_multilingual_site-translator-npm-1.0.11-13c941f34f-8c0.zip/node_modules/@wix/auto_sdk_multilingual_site-translator/",\
+          "packageDependencies": [\
+            ["@wix/auto_sdk_multilingual_site-translator", "npm:1.0.11"],\
+            ["@wix/sdk-runtime", "npm:0.3.55"],\
+            ["@wix/sdk-types", "npm:1.13.31"]\
+          ],\
+          "linkType": "HARD"\
+        }]\
+      ]],\
+      ["@wix/auto_sdk_multilingual_translation-contents", [\
+        ["npm:1.0.36", {\
+          "packageLocation": "../dynamic-modules/yarn-cache/cache/@wix-auto_sdk_multilingual_translation-contents-npm-1.0.36-ba5d95aaf9-8c0.zip/node_modules/@wix/auto_sdk_multilingual_translation-contents/",\
+          "packageDependencies": [\
+            ["@wix/auto_sdk_multilingual_translation-contents", "npm:1.0.36"],\
+            ["@wix/sdk-runtime", "npm:0.3.55"],\
+            ["@wix/sdk-types", "npm:1.13.31"]\
+          ],\
+          "linkType": "HARD"\
+        }]\
+      ]],\
+      ["@wix/auto_sdk_multilingual_translation-credits", [\
+        ["npm:1.0.23", {\
+          "packageLocation": "../dynamic-modules/yarn-cache/cache/@wix-auto_sdk_multilingual_translation-credits-npm-1.0.23-7c4c2df2c8-8c0.zip/node_modules/@wix/auto_sdk_multilingual_translation-credits/",\
+          "packageDependencies": [\
+            ["@wix/auto_sdk_multilingual_translation-credits", "npm:1.0.23"],\
+            ["@wix/sdk-runtime", "npm:0.3.55"],\
+            ["@wix/sdk-types", "npm:1.13.31"]\
+          ],\
+          "linkType": "HARD"\
+        }]\
+      ]],\
+      ["@wix/auto_sdk_multilingual_translation-published-contents", [\
+        ["npm:1.0.28", {\
+          "packageLocation": "../dynamic-modules/yarn-cache/cache/@wix-auto_sdk_multilingual_translation-published-contents-npm-1.0.28-92c2185578-8c0.zip/node_modules/@wix/auto_sdk_multilingual_translation-published-contents/",\
+          "packageDependencies": [\
+            ["@wix/auto_sdk_multilingual_translation-published-contents", "npm:1.0.28"],\
+            ["@wix/sdk-runtime", "npm:0.3.55"],\
+            ["@wix/sdk-types", "npm:1.13.31"]\
+          ],\
+          "linkType": "HARD"\
+        }]\
+      ]],\
+      ["@wix/auto_sdk_multilingual_translation-schemas", [\
+        ["npm:1.0.27", {\
+          "packageLocation": "../dynamic-modules/yarn-cache/cache/@wix-auto_sdk_multilingual_translation-schemas-npm-1.0.27-a216f6d622-8c0.zip/node_modules/@wix/auto_sdk_multilingual_translation-schemas/",\
+          "packageDependencies": [\
+            ["@wix/auto_sdk_multilingual_translation-schemas", "npm:1.0.27"],\
+            ["@wix/sdk-runtime", "npm:0.3.55"],\
+            ["@wix/sdk-types", "npm:1.13.31"]\
+          ],\
+          "linkType": "HARD"\
+        }]\
+      ]],\
+      ["@wix/error-handler-types", [\
+        ["npm:1.9.0", {\
+          "packageLocation": "../dynamic-modules/yarn-cache/cache/@wix-error-handler-types-npm-1.9.0-6e70716f4c-8c0.zip/node_modules/@wix/error-handler-types/",\
+          "packageDependencies": [\
+            ["@wix/error-handler-types", "npm:1.9.0"],\
+            ["@babel/runtime", "npm:7.27.6"]\
+          ],\
+          "linkType": "HARD"\
+        }]\
+      ]],\
+      ["@wix/essentials", [\
+        ["npm:0.1.24", {\
+          "packageLocation": "../dynamic-modules/yarn-cache/cache/@wix-essentials-npm-0.1.24-f9dd4e29b9-8c0.zip/node_modules/@wix/essentials/",\
+          "packageDependencies": [\
+            ["@wix/essentials", "npm:0.1.24"],\
+            ["@wix/monitoring", "npm:0.21.0"],\
+            ["@wix/sdk-runtime", "npm:0.3.55"],\
+            ["@wix/sdk-types", "npm:1.13.31"],\
+            ["graphql", "npm:16.11.0"]\
+          ],\
+          "linkType": "HARD"\
+        }]\
+      ]],\
+      ["@wix/monitoring", [\
+        ["npm:0.21.0", {\
+          "packageLocation": "../dynamic-modules/yarn-cache/cache/@wix-monitoring-npm-0.21.0-f4191f9b01-8c0.zip/node_modules/@wix/monitoring/",\
+          "packageDependencies": [\
+            ["@wix/monitoring", "npm:0.21.0"],\
+            ["@wix/monitoring-types", "npm:0.12.0"]\
+          ],\
+          "linkType": "HARD"\
+        }]\
+      ]],\
+      ["@wix/monitoring-types", [\
+        ["npm:0.12.0", {\
+          "packageLocation": "../dynamic-modules/yarn-cache/cache/@wix-monitoring-types-npm-0.12.0-57b2967839-8c0.zip/node_modules/@wix/monitoring-types/",\
+          "packageDependencies": [\
+            ["@wix/monitoring-types", "npm:0.12.0"]\
+          ],\
+          "linkType": "HARD"\
+        }]\
+      ]],\
+      ["@wix/multilingual", [\
+        ["npm:1.0.171", {\
+          "packageLocation": "../dynamic-modules/yarn-cache/cache/@wix-multilingual-npm-1.0.171-2f716c871f-8c0.zip/node_modules/@wix/multilingual/",\
+          "packageDependencies": [\
+            ["@wix/multilingual", "npm:1.0.171"],\
+            ["@wix/auto_sdk_multilingual_entity-mapper", "npm:1.0.13"],\
+            ["@wix/auto_sdk_multilingual_locale-settings", "npm:1.0.14"],\
+            ["@wix/auto_sdk_multilingual_locales", "npm:1.0.24"],\
+            ["@wix/auto_sdk_multilingual_machine-translation", "npm:1.0.20"],\
+            ["@wix/auto_sdk_multilingual_site-translator", "npm:1.0.11"],\
+            ["@wix/auto_sdk_multilingual_translation-contents", "npm:1.0.36"],\
+            ["@wix/auto_sdk_multilingual_translation-credits", "npm:1.0.23"],\
+            ["@wix/auto_sdk_multilingual_translation-published-contents", "npm:1.0.28"],\
+            ["@wix/auto_sdk_multilingual_translation-schemas", "npm:1.0.27"]\
+          ],\
+          "linkType": "HARD"\
+        }]\
+      ]],\
+      ["@wix/sdk-context", [\
+        ["npm:0.0.1", {\
+          "packageLocation": "../dynamic-modules/yarn-cache/cache/@wix-sdk-context-npm-0.0.1-0a19b890e4-8c0.zip/node_modules/@wix/sdk-context/",\
+          "packageDependencies": [\
+            ["@wix/sdk-context", "npm:0.0.1"]\
+          ],\
+          "linkType": "HARD"\
+        }]\
+      ]],\
+      ["@wix/sdk-runtime", [\
+        ["npm:0.3.55", {\
+          "packageLocation": "../dynamic-modules/yarn-cache/cache/@wix-sdk-runtime-npm-0.3.55-7074c4b289-8c0.zip/node_modules/@wix/sdk-runtime/",\
+          "packageDependencies": [\
+            ["@wix/sdk-runtime", "npm:0.3.55"],\
+            ["@wix/sdk-context", "npm:0.0.1"],\
+            ["@wix/sdk-types", "npm:1.13.31"]\
+          ],\
+          "linkType": "HARD"\
+        }]\
+      ]],\
+      ["@wix/sdk-types", [\
+        ["npm:1.13.31", {\
+          "packageLocation": "../dynamic-modules/yarn-cache/cache/@wix-sdk-types-npm-1.13.31-311690070c-8c0.zip/node_modules/@wix/sdk-types/",\
+          "packageDependencies": [\
+            ["@wix/sdk-types", "npm:1.13.31"],\
+            ["@wix/error-handler-types", "npm:1.9.0"],\
+            ["@wix/monitoring-types", "npm:0.12.0"],\
+            ["type-fest", "npm:4.41.0"]\
+          ],\
+          "linkType": "HARD"\
         }]\
       ]],\
       ["effect", [\
@@ -64,6 +346,15 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "linkType": "HARD"\
         }]\
       ]],\
+      ["graphql", [\
+        ["npm:16.11.0", {\
+          "packageLocation": "../dynamic-modules/yarn-cache/cache/graphql-npm-16.11.0-836e6ade28-8c0.zip/node_modules/graphql/",\
+          "packageDependencies": [\
+            ["graphql", "npm:16.11.0"]\
+          ],\
+          "linkType": "HARD"\
+        }]\
+      ]],\
       ["pure-rand", [\
         ["npm:6.1.0", {\
           "packageLocation": "../dynamic-modules/yarn-cache/cache/pure-rand-npm-6.1.0-497ea3fc37-8c0.zip/node_modules/pure-rand/",\
@@ -73,11 +364,22 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "linkType": "HARD"\
         }]\
       ]],\
+      ["type-fest", [\
+        ["npm:4.41.0", {\
+          "packageLocation": "../dynamic-modules/yarn-cache/cache/type-fest-npm-4.41.0-31a6ce52d8-8c0.zip/node_modules/type-fest/",\
+          "packageDependencies": [\
+            ["type-fest", "npm:4.41.0"]\
+          ],\
+          "linkType": "HARD"\
+        }]\
+      ]],\
       ["user-code", [\
         ["workspace:.", {\
           "packageLocation": "./",\
           "packageDependencies": [\
             ["user-code", "workspace:."],\
+            ["@wix/essentials", "npm:0.1.24"],\
+            ["@wix/multilingual", "npm:1.0.171"],\
             ["effect", "npm:3.12.11"]\
           ],\
           "linkType": "SOFT"\
